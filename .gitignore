@@ -1,0 +1,15 @@
+.Ruserdata
+.positai
+*.csv
+*.rds
+*.RDS
+/script/
+functions/
+/.quarto/
+**/*.quarto_ipynb
+
+
+# R
+.Rhistory
+.RData
+.Rproj.user

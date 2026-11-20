@@ -1,0 +1,223 @@
+---
+title: "IRS Digital Data Collection Tool: Maintenance and Deployment Guide"
+author: "Enku Demssie"
+editor: visual
+date: "September 2026"
+page-layout: article
+resources:
+  - data/IRS_2026_XLSForm_v1.0.xlsx
+
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    self-contained: true
+    number-sections: false
+    css: styles.css
+
+execute:
+  eval: false
+---
+
+## 1. introduction
+
+The IRS digital data collection tool was developed in KoboToolbox at the request of the National Malaria Elimination Program (NMEP) to support a transition from the previously used Excel-based data collection approach to a standardized digital workflow.
+
+Because IRS campaign requirements and target areas may change from one campaign to another, the underlying XLSForm may need to be updated before each campaign. This guide provides the program team with the key steps needed to maintain the IRS form, make campaign-specific updates, and deploy revised versions through KoboToolbox.
+
+## 2. Purpose
+
+The purpose of this guide is to support the continued use and maintenance of the IRS digital data collection tool within NMEP. It focuses on the practical steps required to:
+
+- update campaign-specific information, particularly targeted geographies;
+- make necessary changes to the underlying Excel/XLSForm;
+- upload and check a revised form in KoboToolbox;
+- deploy the updated form for data collection; and
+- obtain and share the data-collection link with field teams.
+
+This guide does not aim to provide comprehensive KoboToolbox training. For general KoboToolbox functionality and advanced form development, users should refer to the available KoboToolbox documentation and learning resources.
+
+## 3. Overview of the Workflow
+
+The IRS digital data collection process follows the workflow below:
+
+Review campaign requirements → Update XLSForm → Validate the form → Upload to KoboToolbox → Test → Deploy → Share with data collectors → Collect and submit data
+
+The Excel/XLSForm serves as the main configuration file for the data collection form. Changes to questions, response options, and campaign-specific information can be made in the XLSForm before the revised version is uploaded and deployed in KoboToolbox.
+
+## 4. The IRS XLSForm
+
+The data collection tool is built using the XLSForm format, which allows the structure and logic of the KoboToolbox form to be defined in Excel.
+
+The workbook contains several sheets, with the main components being:
+
+- survey – contains the questions, variables, response types, and form logic;
+- choices – contains the response options used by select-type questions; and
+- settings – contains information used to identify and configure the form.
+
+For routine campaign updates, most changes will be made in the survey and choices sheets.
+
+You can download the current IRS XLSForm here:
+
+[Download the IRS 2026 XLSForm](data/IRS_2026_XLSForm_v1.0.xlsx)
+
+### 4.1 Before making changes
+
+Before modifying the form for a new campaign:
+
+1.  Make a copy of the current XLSForm.
+2.  Rename the copy to clearly identify the campaign and version.
+3.  Review the current form and identify the information that needs to change.
+4.  Keep the previous version unchanged for reference and record keeping.
+
+**For example:**
+
+- *IRS_2026_XLSForm_v1.0.xlsx*
+- *IRS_2027_XLSForm_v1.0.xlsx*
+
+If multiple revisions are required during the same campaign, the version can be updated accordingly:
+
+- *IRS_2027_XLSForm_v1.1.xlsx*
+- *IRS_2027_XLSForm_v1.2.xlsx*
+
+## 5. Updating Targeted Geographies
+
+The geographical areas targeted for IRS may vary between campaigns. The targeted geography lists should therefore be reviewed and updated before deploying the form for a new campaign.
+
+The current IRS form captures geographic information up to the woreda level, following the hierarchy:
+
+Region → Zone → Woreda
+
+If future IRS activities require data collection at the kebele level, kebele information should be added to the XLSForm, together with the corresponding region, zone, and woreda for each kebele. The geographic hierarchy should then be updated so that data collectors can select the appropriate kebele under the relevant woreda.
+
+### 5.1 Updating the geography list
+
+The geographic options are maintained in the choices sheet of the XLSForm.
+
+When updating the target areas:
+
+1.  Review the geographic areas targeted for the upcoming IRS campaign.
+2.  Identify areas that need to be added or removed.
+3.  Update the corresponding entries in the choices sheet.
+4.  Maintain the existing geographic hierarchy and variable structure.
+5.  Ensure that each geographic option has a unique and appropriate code.
+6.  If kebele-level data collection is required, add each kebele together with its corresponding region, zone, and woreda.
+7.  Check that the geographic relationships are correctly defined so that selecting a region displays the appropriate zones, selecting a zone displays the appropriate woredas, and, where applicable, selecting a woreda displays the appropriate kebeles.
+8.  Save the updated XLSForm.
+
+**Note:** The current version of the tool collects data up to the woreda level. Kebele-level collection is not currently included but can be incorporated when required by adding the kebele list and its corresponding region, zone, and woreda relationships to the XLSForm.
+
+**Important:** Do not change variable names, codes, or other underlying identifiers without first checking how they are used elsewhere in the form or in downstream analysis. Changes to these identifiers can affect form logic and data comparability.
+
+### 5.2 Checking geographic logic
+
+After updating the geography list, test the geographic selections to make sure that: - the correct regions appear; - the corresponding zones are displayed under each region; - the correct woredas are displayed under each zone; - the correct kebeles are displayed under each woreda, where applicable; and - areas that are no longer targeted do not appear as selectable options.
+
+A test should be performed using several geographic combinations before the updated form is deployed.
+
+## 6. Making Other Campaign-Specific Changes
+
+In addition to geographic areas, other elements of the form may need to be updated depending on the requirements of a particular IRS campaign. Examples may include: - adding or removing questions; - updating response options; - changing campaign-specific instructions; - updating dates or campaign identifiers; and - modifying form logic where operational requirements have changed.
+
+Changes should be kept as limited as possible and should be tested before deployment.
+
+For questions or changes involving calculations, skip logic, or constraints, the person responsible for the data system should review the changes before the form is deployed.
+
+## 7. Validating the Updated XLSForm
+
+Before uploading the revised form to KoboToolbox, conduct a basic review of the Excel file. At minimum, check that: - all required questions are present; - question names are unique; - response options are correctly defined; - geographic lists are complete and correctly linked; - skip logic works as intended; - required fields are correctly identified; - constraints and validation rules are functioning; - there are no accidental changes to existing variables or codes.
+
+The revised XLSForm should then be tested as a user would complete it in the field.
+
+## 8. Uploading the Updated Form to KoboToolbox
+
+Once the XLSForm has been reviewed and tested, the revised form can be uploaded to KoboToolbox. The general process is: 1. Sign in to the KoboToolbox account. 2. Open the relevant project. 3. Open the form or create a new version, depending on the required update process. 4. Upload the revised XLSForm. 5. Allow KoboToolbox to validate and process the form. 6. Review any errors or warnings reported by KoboToolbox. 7. Correct the XLSForm and upload it again if necessary. 8. Open the processed form and conduct a final check.
+
+**Do not deploy the form until the updated version has been reviewed and tested.**
+
+## 9. Testing the KoboToolbox Form
+
+Testing should be performed after the revised XLSForm has been uploaded and before the form is made available for actual data collection.
+
+The test should cover the main paths through the form, including:
+
+- selecting different geographic areas;
+- completing required fields;
+- checking conditional questions;
+- checking response options;
+- testing validation rules;
+- confirming that calculations, where applicable, work correctly; and
+- completing a test submission.
+
+Where possible, the test should reflect the way the form will actually be used by field data collectors.
+
+## 10. Deploying the Form
+
+After the form has passed testing, it can be deployed for data collection.
+
+Deployment makes the form available for actual submissions. Before deployment, confirm that:
+
+- the correct campaign version is being deployed;
+- the target geographies are correct;
+- all required questions and response options are present;
+- the form has been tested successfully; and
+- the appropriate data-collection settings are in place.
+
+Once deployed, avoid making unnecessary changes to the form during active data collection. If a change is required, the implications for already collected data should be considered before updating the deployed form.
+
+## 11. Sharing the Form with Data Collectors
+
+After deployment, KoboToolbox provides the link or access method through which data collectors can access the form.
+
+The deployment workflow is:
+
+Deploy form → Obtain data-collection link/access method → Test the link → Share with data collectors
+
+Before distributing the link widely, it is recommended that the program team open it using the same access method that will be used by data collectors and confirm that the correct version of the form is displayed.
+
+## 12. Updating the Form for Future Campaigns
+
+For subsequent IRS campaigns, the same general workflow can be followed:
+
+Previous campaign XLSForm → Save as new version → Update campaign-specific information → Review target geographies → Test → Upload → Validate → Deploy → Share
+
+The previous campaign's XLSForm should be retained as an archive rather than overwritten. This provides a record of the form used for each campaign and helps maintain consistency when interpreting historical data.
+
+## 13. Recommended Version Management
+
+A simple version naming system should be used to distinguish different campaign versions. For example:
+
+| File                       | Description                 |
+|----------------------------|-----------------------------|
+| IRS_2026_XLSForm_v1.0.xlsx | Initial 2026 campaign form  |
+| IRS_2026_XLSForm_v1.1.xlsx | Minor revision to 2026 form |
+| IRS_2027_XLSForm_v1.0.xlsx | Initial 2027 campaign form  |
+
+A simple change log can also be maintained:
+
+| Version | Date       | Main changes                     |
+|---------|------------|----------------------------------|
+| v1.0    | YYYY-MM-DD | Initial campaign form            |
+| v1.1    | YYYY-MM-DD | Updated target geographies       |
+| v1.2    | YYYY-MM-DD | Added/removed campaign questions |
+
+This makes it easier to identify which form version was used during a particular campaign.
+
+## 14. Pre-Deployment Checklist
+
+Before deploying an updated IRS data collection form, confirm the following:
+
+- [ ] Targeted geographies have been updated
+- [ ] Geographic hierarchy has been checked
+- [ ] Campaign-specific information has been updated
+- [ ] XLSForm has been validated
+- [ ] Form uploaded to KoboToolbox
+- [ ] Form tested
+- [ ] Form deployed
+- [ ] Data-collection link shared with field teams
+
+## 15. Additional KoboToolbox Resources
+
+This guide focuses specifically on maintaining and deploying the IRS data collection tool. It is not intended to replace the broader KoboToolbox user documentation.
+
+For general guidance on XLSForms, form design, data collection, deployment, and other KoboToolbox functionality, users should refer to the official KoboToolbox documentation and learning resources or other online available resources.
