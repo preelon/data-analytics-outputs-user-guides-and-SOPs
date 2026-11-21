@@ -1,0 +1,28 @@
+# Malaria analytical bulletin workflow
+
+> **Integration instruction:** Replace this starter chapter with the complete content of your existing `bulletin/index.qmd`. Preserve the original analytical code and its sequence. Then add the teaching notes described below.
+
+## 2.1 Purpose and expected output
+
+Describe the bulletin's purpose, reporting frequency, intended audience, and final output.
+
+## 2.2 Data inputs and preparation
+
+Document the source datasets, required variables, reporting period, data-quality checks, and preparation steps.
+
+## 2.3 Analytical workflow
+
+Insert the original code blocks in the order participants should execute them. For each logical block, add:
+
+- **Purpose:** What this block accomplishes.
+- **Explanation:** What the important commands and transformations do.
+- **Expected output:** What participants should see.
+- **Interpretation:** What the output means for malaria program monitoring.
+
+## 2.4 Visualization and bulletin production
+
+Explain how tables, figures, indicators, and narrative findings are produced and assembled into the bulletin.
+
+## Practical exercise
+
+Ask participants to reproduce one key indicator or figure using the training dataset and explain its interpretation.

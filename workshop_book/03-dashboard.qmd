@@ -1,0 +1,23 @@
+# NMEP malaria dashboard workflow
+
+> **Integration instruction:** Replace this starter chapter with the complete content of your existing `dashboard/index.qmd`. Preserve the original code and execution sequence. Add explanations and expected outputs.
+
+## 3.1 Purpose and dashboard overview
+
+Explain the dashboard's intended users, functions, indicators, filters, geographic levels, and reporting period.
+
+## 3.2 Data preparation
+
+Document the input files, data cleaning, geographic integration, population denominators, and indicator calculations.
+
+## 3.3 Dashboard code and components
+
+Insert the original code in logical sections. Explain the user interface, reactive elements, filters, charts, maps, and summary indicators.
+
+## 3.4 Running and updating the dashboard
+
+Explain how to launch the application, update the underlying data, verify outputs, and deploy or share the dashboard according to the approved NMEP process.
+
+## Practical exercise
+
+Ask participants to select a region or zone, apply a reporting-period filter, and interpret the resulting indicators.

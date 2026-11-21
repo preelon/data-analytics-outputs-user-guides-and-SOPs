@@ -1,0 +1,23 @@
+# IRS digital data collection workflow
+
+> **Integration instruction:** Use the existing digital data collection guide as the source. This chapter may include KoboToolbox procedures and XLSForm explanations rather than R code. Preserve the actual form logic and validation rules.
+
+## 4.1 Purpose and overview
+
+Explain the purpose of the IRS digital data collection tool and the information it captures.
+
+## 4.2 XLSForm structure
+
+Explain the `survey`, `choices`, and `settings` sheets, including relevant question types, choice lists, constraints, relevance conditions, and required fields.
+
+## 4.3 Form deployment and testing
+
+Document the approved process for uploading, validating, testing, and deploying the form in KoboToolbox.
+
+## 4.4 Data export and quality checks
+
+Explain how to export submissions, inspect the data, identify missing or invalid values, and prepare the data for analysis.
+
+## Practical exercise
+
+Ask participants to complete a test submission, identify how a selected response affects the form, and inspect the exported record.

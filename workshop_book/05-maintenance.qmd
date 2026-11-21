@@ -1,0 +1,30 @@
+# Maintenance and troubleshooting
+
+## 5.1 Routine maintenance
+
+Document who is responsible for updating each product, how often updates are expected, and where source files and outputs are maintained.
+
+## 5.2 Updating reporting periods and datasets
+
+Explain which parameters, dates, input files, and reporting-period settings must be updated. Do not assume that all workflows use the same update procedure.
+
+## 5.3 Package and software management
+
+Record the tested R version, package dependencies, Quarto version, and any external software requirements. Keep this list aligned with the actual environment used by NMEP.
+
+## 5.4 Quality assurance before release
+
+- Confirm the reporting period and data source.
+- Check completeness and validity of input data.
+- Reconcile key indicators with approved source reports.
+- Inspect tables, charts, maps, and narrative findings.
+- Confirm that the final output opens correctly.
+- Retain a dated copy of the released output and supporting scripts.
+
+## 5.5 Troubleshooting
+
+Add the actual errors encountered during testing and their verified solutions. Avoid listing untested fixes.
+
+## Handover checklist
+
+Use this section to record the responsible NMEP focal person, file locations, access requirements, update schedule, and outstanding issues for each product.

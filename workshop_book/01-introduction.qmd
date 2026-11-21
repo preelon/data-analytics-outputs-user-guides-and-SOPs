@@ -1,0 +1,25 @@
+# Introduction and preparation
+
+## 1.1 Purpose
+
+Describe the purpose of the NMEP data analytics products and how they support malaria program monitoring, decision-making, and reporting.
+
+## 1.2 Software and access requirements
+
+List the software versions, access permissions, packages, and accounts required for each workflow. Confirm these requirements against the actual workshop computers before finalizing the manual.
+
+## 1.3 Project and data folder structure
+
+Insert the actual folder structure used in the workshop. Explain where source datasets, scripts, outputs, geographic files, and documentation are stored.
+
+## 1.4 Before starting the practical sessions
+
+- Confirm that participants can access the required datasets.
+- Confirm that R and RStudio are installed where needed.
+- Confirm that required R packages are installed.
+- Use a copy of the training data; do not experiment on production data.
+- Confirm that participants have the required KoboToolbox access for the IRS session.
+
+## Practical exercise
+
+Ask participants to locate the training dataset, identify its reporting period, and identify the main geographic and indicator variables.

@@ -1,0 +1,5 @@
+# References and supporting materials
+
+Add the data-source documentation, indicator definitions, national guidelines, software documentation, standard operating procedures, and other references used in the manual.
+
+Include version dates and links where available.

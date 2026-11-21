@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: _book
+  execute-dir: project
+
+book:
+  title: "NMEP Data Analytics Workflows"
+  subtitle: "Workshop Implementation and Handover Manual"
+  author: "National Malaria Elimination Program"
+  chapters:
+    - index.qmd
+    - 01-introduction.qmd
+    - 02-bulletin.qmd
+    - 03-dashboard.qmd
+    - 04-irs-digital-tool.qmd
+    - 05-maintenance.qmd
+    - references.qmd
+
+format:
+  pdf:
+    documentclass: scrreprt
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    colorlinks: true
+    geometry:
+      - top=25mm
+      - bottom=25mm
+      - left=25mm
+      - right=25mm
+    fontsize: 10pt
+
+# Code is displayed in the manual but is not executed during PDF production.
+# Participants will execute the code during the hands-on workshop.
+execute:
+  eval: false
+  echo: true
+  warning: false
+  message: false
